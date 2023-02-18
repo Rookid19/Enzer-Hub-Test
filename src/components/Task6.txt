@@ -1,9 +1,0 @@
-let n = total number total number of buttons , where n = 10
-let n = number of buttons to be selected, where n = 8
-
-Using the combination formula
- nCr = n! / r!(n-r)!
-
-8C5 = 8! / 5!(8-5)! = (876)/(321) = 56
-
-Therefore the user can make 56 possible bets
