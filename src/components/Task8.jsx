@@ -10,11 +10,15 @@ function Task8() {
       .then((res) => {
         setData(res.data);
         console.log(res.data);
-      });
+      })
+      .catch((error) => alert(error));
   };
 
   useEffect(() => {
-    fetchData();
+    const interval = setInterval(() => {
+      fetchData();
+    }, 10000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -36,27 +40,29 @@ function Task8() {
             <th>company name</th>
             <th>catch phrase</th>
             <th>bs</th>
-
-
           </tr>
-          {data.map(({ id ,name,username,address,phone,website,company}) => (
-            <tr key={id}>
-              <td>{id}</td>
-              <td>{name}</td>
-              <td>{username}</td>
-              <td>{address.street}</td>
-              <td>{address.suite}</td>
-              <td>{address.city}</td>
-              <td>{address.zipcode}</td>
-              <td>{address.geo.lat}</td>
-              <td>{address.geo.lng}</td>
-              <th>{phone}</th>
-            <th><a href={`http://${website}`}>{website}</a> </th>
-            <th>{company.name}</th>
-            <th>{company.catchPhrase}</th>
-            <th>{company.bs}</th>
-            </tr>
-          ))}
+          {data.map(
+            ({ id, name, username, address, phone, website, company }) => (
+              <tr key={id}>
+                <td>{id}</td>
+                <td>{name}</td>
+                <td>{username}</td>
+                <td>{address.street}</td>
+                <td>{address.suite}</td>
+                <td>{address.city}</td>
+                <td>{address.zipcode}</td>
+                <td>{address.geo.lat}</td>
+                <td>{address.geo.lng}</td>
+                <th>{phone}</th>
+                <th>
+                  <a href={`http://${website}`}>{website}</a>{" "}
+                </th>
+                <th>{company.name}</th>
+                <th>{company.catchPhrase}</th>
+                <th>{company.bs}</th>
+              </tr>
+            )
+          )}
         </tbody>
       </table>
       <br />
