@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 function Task7() {
@@ -59,9 +58,7 @@ function Task7() {
   }, [number]);
 
 
-  const fetchData = async() =>{
-    await axios.get("https://jsonplaceholder.typicode.com/users").then(res=> console.log(res.data))
-  }
+ 
 
   return (
     <div>
@@ -86,7 +83,6 @@ function Task7() {
         {divisibleState?.type}
       </h3>
 
-      <button onClick={fetchData}>Fetch Data</button>
     </div>
   );
 }
