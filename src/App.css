@@ -1,0 +1,19 @@
+.first_row {
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.button_container {
+    /* background-color: red; */
+   /* display: "flex"; */
+  /* justify-content: "space-around"; */
+}
+.button {
+  width: 60px;
+  margin-inline: 10px;
+}
+
+.all_select,.all_clear{
+  margin-left:25px;
+}
+
