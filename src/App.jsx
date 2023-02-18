@@ -6,6 +6,7 @@ import Task5 from "./components/Task5";
 import "./App.css";
 import { button_labels, rows } from "./utils/Data";
 import Task6 from "./components/Task6";
+import Task7 from "./components/Task7";
 
 export default function App() {
   const [elementMatch, setElementMatch] = useState(0);
@@ -121,6 +122,7 @@ export default function App() {
         ))}
       </div>
       <Task6 />
+      <Task7 />
     </div>
   );
 }
