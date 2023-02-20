@@ -1,0 +1,87 @@
+user selection
+1,2,3,4,5
+2,3,4,5,6
+3,4,5,6,7
+4,5,6,7,8
+5,6,7,8,9
+
+machine selection
+1,2,3,4,5
+
+task1. Compare the user selection and machine selection to see if both contain the same element
+task2. write a javascript program to output to the console the same result as task1
+
+number of user selection = ?
+number of element match = ?
+
+task3. assume you have this table
+
+department table
+--------------
+
+dept_id     dept_name     dept_location
+10	 Account          Ghana
+20	Market	        Nigeria
+30             Sales	        Warsaw
+
+
+employee table
+--------------
+
+emp_id     emp_name     dept_id            salary
+1	 Kojo              20	             1000
+2	 black	      20	             5000
+3               John	      10	             4500
+4              ama	      30	             500
+
+
+Write a single line query to return the table below
+
+dept_id     count             salary_sum
+10	1                    4500
+20	2	      6000
+30            1	      500
+
+Task 4. Create a 0 to 9 buttons, on button click get the text on the button and store in an array. 
+Use css to show the active state for the selection.
+your final array example  = [0,1,2,3,4,5,6,7,8,9]
+
+Task 5. Create 5 buttons,  on top of each button write big, small, odd, even, all, clear.
+on click on each button based on the name, set active css state to the 0 - 9 buttons.
+also fill the array with the values 
+eg. small = [0,1,2,3,4], big = [5,6,7,8,9]
+
+Task 6. Assuming we have buttons 0 - 9, the user has to select 5 buttons to form one bet. 
+if the user select 8 out of the 9 buttons how many bet will the user have.
+
+
+
+
+
+
+/ Saturday task
+// given a function that accepts an input as parameter
+// if the input is divisible by 3 and 5 return "FizzBuzz"
+// if the input is divisible by 3 return "Fizz"
+// if the input is divisible by 5 return "Buzz"
+// if the input is not divisible by 3 or 5 or 3 and 5 return  input
+// if the input is not a number or integer retun NaN
+
+
+// a Write a program to fetch  data from https://jsonplaceholder.typicode.com/users
+//   Every one minute
+//   display the result in html table
+//   using Promise
+
+// b write a program to push 3 random numbers from 0 - 9 to an Array
+//   const draws [] every 1 minute
+//   display the draws in the browser
+//   Put a button on the web page
+//   onClick of the button  reset the drawing numbers to whatever 
+//   number is passed in as a parameter to the function
+
+
+// c given this Array of numbers [0,1,2,3,4,5,6,7,8,9]
+//   copy each of the numbers into a new array [[0],[1], ...]
+
+

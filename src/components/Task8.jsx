@@ -15,12 +15,17 @@ function Task8() {
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      fetchData();
-    }, 10000);
-    return () => clearInterval(interval);
+    fetchData();
   }, []);
 
+  const fetchDataInterval = () => {
+    const interval = setInterval(() => {
+      fetchData();
+    }, 60000);
+    return () => clearInterval(interval);
+  };
+
+  fetchDataInterval();
   return (
     <div>
       <table>

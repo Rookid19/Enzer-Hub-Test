@@ -38,15 +38,18 @@ function Task7() {
         input % 5 === 0
       )
     ) {
-      divisibleState.user_input = input;
+      divisibleState.user_input = isNaN(input) ? null : input;
+      console.log("input " + input)
     } else {
       divisibleState.user_input = "";
     }
 
-    if (typeof input !== "number" || !Number.isInteger(input)) {
+    
+    if (typeof input !== "number") {
         divisibleState.type = NaN
     //   return NaN;
     }
+    console.log("--> type of "+ typeof input)
 
     setDivisibleState({ ...divisibleState });
   };
