@@ -49,9 +49,7 @@ function Task11() {
         Show total bet
       </button>
       <h3>The total bet is {answer}</h3>
-      <br />
-      <br />
-      <br />
+     
     </div>
   );
 }
