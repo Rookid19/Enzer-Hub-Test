@@ -7,11 +7,13 @@ function Task12() {
   let row4 = [4, 7];
   let row5 = [5, 6, 8, 9];
 
+  // total number of user selection
   const total_user_selection =
     row1.length + row2.length + row3.length + row4.length + row5.length;
 
+    //number to form one bet
   const number_to_form_one_bet = 1;
-  const fiveRows = [row1, row2, row3, row4, row5];
+
 
   const getNumCombinations = (n, k) => {
     // calculate the binomial coefficient
