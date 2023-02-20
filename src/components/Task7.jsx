@@ -7,7 +7,7 @@ function Task7() {
     three: "",
     five: "",
     user_input: "",
-    type:""
+    type: "",
   });
 
   const divisor = (input) => {
@@ -39,17 +39,16 @@ function Task7() {
       )
     ) {
       divisibleState.user_input = isNaN(input) ? null : input;
-      console.log("input " + input)
+      console.log("input " + input);
     } else {
       divisibleState.user_input = "";
     }
 
-    
-    if (typeof input !== "number") {
-        divisibleState.type = NaN
-    //   return NaN;
-    }
-    console.log("--> type of "+ typeof input)
+    if (typeof input === "number") {
+      divisibleState.type = isNaN(input) ? input : null;
+      //   return NaN;
+    } 
+    console.log("--> type of " + typeof input);
 
     setDivisibleState({ ...divisibleState });
   };
@@ -59,9 +58,6 @@ function Task7() {
       divisor(parseInt(number));
     }
   }, [number]);
-
-
- 
 
   return (
     <div>
@@ -85,7 +81,6 @@ function Task7() {
         <br />({number}) is not a number or integer {"===>"}
         {divisibleState?.type}
       </h3>
-
     </div>
   );
 }

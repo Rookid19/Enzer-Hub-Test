@@ -5,12 +5,20 @@ function Task10() {
 
   const new_array = [];
 
-
   for (let num of array) {
     new_array.push([num]);
   }
-  console.log(JSON.stringify(new_array))
-  return <div>Task10</div>;
+
+  function results() {
+    console.log(JSON.stringify(new_array));
+  }
+
+  return (
+    <div>
+      <h1>Task 10</h1>
+      <button onClick={results}>View results</button>
+    </div>
+  );
 }
 
 export default Task10;

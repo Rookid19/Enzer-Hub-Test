@@ -4,22 +4,22 @@ function Task9() {
   const [draws, setDraws] = useState([]);
   const [resetNums, setResetNums] = useState([]);
 
+  const drawsInterval = () => {
+      const newDraw = [getRandomNumber(), getRandomNumber(), getRandomNumber()];
+      console.log(newDraw);
+      setDraws((draws) => [...draws, newDraw]);
+  };
 
-//   const drawsInterval = () => {
-//     const interval = setInterval(() => {
-//       const newDraw = [getRandomNumber(), getRandomNumber(), getRandomNumber()];
-//       console.log(newDraw)
-//       setDraws((draws) => [...draws, newDraw]);
-//     }, 60000);
-//     return () => clearInterval(interval);
-//   };
-
-    // Set up the interval to push 3 random numbers to the array every minute
   useEffect(() => {
-    const newDraw = [getRandomNumber(), getRandomNumber(), getRandomNumber()];
-    setDraws((draws) => [ newDraw]);
-//   DrawsInterval();
+    drawsInterval();
+    const interval = setInterval(() => {
+      drawsInterval();
+    }, 10000);
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
+
 
   // Reset the drawing numbers to the new set of 3 random numbers passed in as a parameter
   const handleReset = (nums) => {
