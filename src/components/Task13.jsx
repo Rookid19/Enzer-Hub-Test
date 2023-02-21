@@ -7,6 +7,7 @@ function Task13() {
   const row4 = [];
   const row5 = [];
 
+  // combining all rows in one array
   const row = [row1, row2, row3, row4, row5];
 
   const concatenateArrays = () => {

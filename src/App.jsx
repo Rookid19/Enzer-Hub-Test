@@ -13,6 +13,7 @@ import Task9 from "./components/Task9";
 import Task11 from "./components/Task11";
 import Task12 from "./components/Task12";
 import Task13 from "./components/Task13";
+import Task14 from "./components/Task14";
 
 export default function App() {
   const [elementMatch, setElementMatch] = useState(0);
@@ -135,6 +136,7 @@ export default function App() {
       <Task11 />
       <Task12 />
       <Task13 />
+      <Task14 />
     </div>
   );
 }
