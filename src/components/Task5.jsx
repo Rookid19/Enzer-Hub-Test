@@ -4,14 +4,24 @@ import "../App.css";
 import useRows from "../hooks/useRowsData";
 
 function Task5({ row }) {
-  const { setFirstArray, setSecondArray, setThirdArray } = useRows();
+  const {
+    setFirstArray,
+    setSecondArray,
+    setThirdArray,
+    setFourthArray,
+    setFifthArray,
+  } = useRows();
 
   const setArray =
     row.id === 1
       ? setFirstArray
       : row.id === 2
       ? setSecondArray
-      : setThirdArray;
+      : row.id === 3
+      ? setThirdArray
+      : row.id === 4
+      ? setFourthArray
+      : setFifthArray;
 
   const even = button_labels.filter((item) => item % 2 === 0);
   const odd = button_labels.filter((item) => item % 2 !== 0);
@@ -33,9 +43,9 @@ function Task5({ row }) {
       setArray(big);
     } else if (label === "all") {
       setArray(labels);
-      console.log(labels);
     }
   };
+  
   return (
     <div>
       <div className="button_container">
@@ -50,14 +60,3 @@ function Task5({ row }) {
 }
 
 export default Task5;
-
-// const styles = {
-//   button_container: {
-//     // display: "flex",
-//     // justifyContent: "space-around",
-//     // width: 550,
-//   },
-//   button: {
-//     // width: 40,
-//   },
-// };

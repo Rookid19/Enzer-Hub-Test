@@ -7,25 +7,42 @@ function Task4({ row }) {
     firstArray,
     secondArray,
     thirdArray,
+    fourthArray,
+    fifthArray,
     setFirstArray,
     setSecondArray,
     setThirdArray,
+    setFourthArray,
+    setFifthArray,
   } = useRows();
 
   const array =
-    row.id === 1 ? firstArray : row.id === 2 ? secondArray : thirdArray;
+    row.id === 1
+      ? firstArray
+      : row.id === 2
+      ? secondArray
+      : row.id === 3
+      ? thirdArray
+      : row.id === 4
+      ? fourthArray
+      : fifthArray;
+
   const setArray =
     row.id === 1
       ? setFirstArray
       : row.id === 2
       ? setSecondArray
-      : setThirdArray;
+      : row.id === 3
+      ? setThirdArray
+      : row.id === 4
+      ? setFourthArray
+      : setFifthArray;
 
   const onSelect = (label) => {
     if (array.includes(label)) {
       const index = array.indexOf(label);
       array.splice(index, 1);
-      console.log(array);
+      // console.log(array);
       setArray((prev) => [...prev]);
     } else {
       setArray((prev) => [...prev, label]);

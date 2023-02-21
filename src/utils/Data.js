@@ -13,7 +13,6 @@ export const machine_selection = [1, 2, 3, 4, 5];
 //exporting buttons label globally
 export const button_labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-
 export const task5_buttons = [
   { id: 1, label: "big" },
   { id: 2, label: "small" },
@@ -36,5 +35,13 @@ export const rows = [
   {
     id: 3,
     name: "3rd",
+  },
+  {
+    id: 4,
+    name: "4th",
+  },
+  {
+    id: 5,
+    name: "5th",
   },
 ];

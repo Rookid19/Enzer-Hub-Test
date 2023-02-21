@@ -16,10 +16,9 @@ import Task13 from "./components/Task13";
 import Task14 from "./components/Task14";
 import useRows from "./hooks/useRowsData";
 import SelectClear from "./components/SelectClear";
+import Task15 from "./components/Task15";
 
 export default function App() {
-
-
   return (
     <div>
       <Task1 />
@@ -31,7 +30,7 @@ export default function App() {
           <Task5 row={row} />
         </div>
       ))}
-    <SelectClear />
+      <SelectClear />
       <Task6 />
       <Task7 />
       <Task8 />
@@ -41,6 +40,10 @@ export default function App() {
       <Task12 />
       <Task13 />
       <Task14 />
+      <Task15 />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }
