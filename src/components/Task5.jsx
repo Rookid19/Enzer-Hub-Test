@@ -1,14 +1,24 @@
 import React from "react";
 import { button_labels, task5_buttons } from "../utils/Data";
 import "../App.css";
+import useRows from "../hooks/useRowsData";
 
-function Task5({ setArray }) {
+function Task5({ row }) {
+  const { setFirstArray, setSecondArray, setThirdArray } = useRows();
+
+  const setArray =
+    row.id === 1
+      ? setFirstArray
+      : row.id === 2
+      ? setSecondArray
+      : setThirdArray;
+
   const even = button_labels.filter((item) => item % 2 === 0);
   const odd = button_labels.filter((item) => item % 2 !== 0);
   const small = button_labels.slice(0, 5);
   const big = button_labels.slice(5, 10);
 
-const labels = [0,1,2,3,4,5,6,7,8,9]
+  const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   const select = (label) => {
     if (label === "even") {
@@ -21,9 +31,9 @@ const labels = [0,1,2,3,4,5,6,7,8,9]
       setArray(small);
     } else if (label === "big") {
       setArray(big);
-    } else if (label === "all"){
+    } else if (label === "all") {
       setArray(labels);
-      console.log(labels)
+      console.log(labels);
     }
   };
   return (
@@ -35,7 +45,6 @@ const labels = [0,1,2,3,4,5,6,7,8,9]
           </button>
         ))}
       </div>
-  
     </div>
   );
 }

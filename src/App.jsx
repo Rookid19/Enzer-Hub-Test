@@ -14,47 +14,21 @@ import Task11 from "./components/Task11";
 import Task12 from "./components/Task12";
 import Task13 from "./components/Task13";
 import Task14 from "./components/Task14";
+import useRows from "./hooks/useRowsData";
 
 export default function App() {
-  // task 1 
-
-
-
-  
+ 
+  const {onSelectAll,onClear} = useRows()
 
   return (
     <div>
-      <Task1  />
-      <Task2  />
-      {/* <h1>TASK 4 and 5</h1>
+      <Task1 />
+      <Task2 />
+      <h1>TASK 4 and 5</h1>
       {rows.map((row) => (
         <div className="first_row" key={row.id}>
-          <Task4
-            row={row}
-            array={
-              row.id === 1
-                ? firstArray
-                : row.id === 2
-                ? secondArray
-                : thirdArray
-            }
-            setArray={
-              row.id === 1
-                ? setFirstArray
-                : row.id === 2
-                ? setSecondArray
-                : setThirdArray
-            }
-          />
-          <Task5
-            setArray={
-              row.id === 1
-                ? setFirstArray
-                : row.id === 2
-                ? setSecondArray
-                : setThirdArray
-            }
-          />
+          <Task4 row={row} />
+          <Task5 row={row} />
         </div>
       ))}
       <div className="all_select">
@@ -87,7 +61,7 @@ export default function App() {
       <Task11 />
       <Task12 />
       <Task13 />
-      <Task14 /> */}
+      <Task14 />
     </div>
   );
 }

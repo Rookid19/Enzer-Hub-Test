@@ -1,12 +1,31 @@
 import React from "react";
 import { button_labels } from "../utils/Data";
 import "../App.css";
-function Task4({ array, setArray, row }) {
+import useRows from "../hooks/useRowsData";
+function Task4({ row }) {
+  const {
+    firstArray,
+    secondArray,
+    thirdArray,
+    setFirstArray,
+    setSecondArray,
+    setThirdArray,
+  } = useRows();
+
+  const array =
+    row.id === 1 ? firstArray : row.id === 2 ? secondArray : thirdArray;
+  const setArray =
+    row.id === 1
+      ? setFirstArray
+      : row.id === 2
+      ? setSecondArray
+      : setThirdArray;
+
   const onSelect = (label) => {
     if (array.includes(label)) {
       const index = array.indexOf(label);
       array.splice(index, 1);
-      console.log(array)
+      console.log(array);
       setArray((prev) => [...prev]);
     } else {
       setArray((prev) => [...prev, label]);
@@ -14,9 +33,9 @@ function Task4({ array, setArray, row }) {
   };
 
   return (
-    <div >
+    <div>
       <div className="button_container">
-        <span >{row.name}</span>
+        <span>{row.name}</span>
         {button_labels.map((label) => (
           <button
             className="button"
@@ -30,20 +49,8 @@ function Task4({ array, setArray, row }) {
           </button>
         ))}
       </div>
-      
     </div>
   );
 }
 
 export default Task4;
-
-// const styles = {
-//   button_container: {
-//     display: "flex",
-//     justifyContent: "space-around",
-//     width: 550,
-//   },
-//   button: {
-//     width: 40,
-//   },
-// };

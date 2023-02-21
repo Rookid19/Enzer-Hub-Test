@@ -11,7 +11,6 @@ export const RowsProvider = ({ children }) => {
 
   const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-
   // whenever there is a change in firstArray, secondArray and third Array the useEffect fucntion fires
   useEffect(() => {
     if (rows[0].name === "1st") {
@@ -65,8 +64,27 @@ export const RowsProvider = ({ children }) => {
     () => ({
       elementMatch,
       setElementMatch,
+      firstArray,
+      secondArray,
+      thirdArray,
+      setFirstArray,
+      setSecondArray,
+      setThirdArray,
+      onSelectAll,
+      onClear
     }),
-    [elementMatch, setElementMatch]
+    [
+      elementMatch,
+      setElementMatch,
+      firstArray,
+      secondArray,
+      thirdArray,
+      setFirstArray,
+      setSecondArray,
+      setThirdArray,
+      onSelectAll,
+      onClear
+    ]
   );
 
   return (
