@@ -15,10 +15,10 @@ import Task12 from "./components/Task12";
 import Task13 from "./components/Task13";
 import Task14 from "./components/Task14";
 import useRows from "./hooks/useRowsData";
+import SelectClear from "./components/SelectClear";
 
 export default function App() {
- 
-  const {onSelectAll,onClear} = useRows()
+
 
   return (
     <div>
@@ -31,28 +31,7 @@ export default function App() {
           <Task5 row={row} />
         </div>
       ))}
-      <div className="all_select">
-        {button_labels.map((label, index) => (
-          <button
-            key={label}
-            className="button"
-            onClick={() => onSelectAll(label, index)}
-          >
-            All
-          </button>
-        ))}
-      </div>
-      <div className="all_clear">
-        {button_labels.map((label, index) => (
-          <button
-            key={label}
-            className="button"
-            onClick={() => onClear(label, index)}
-          >
-            Clear index{index}
-          </button>
-        ))}
-      </div>
+    <SelectClear />
       <Task6 />
       <Task7 />
       <Task8 />
