@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useFomula from "../hooks/useFormula";
+import useFormula from "../hooks/useFormula";
 
 function Task11() {
   const [totalUserSelection, setTotalUserSelection] = useState("");
@@ -7,7 +7,7 @@ function Task11() {
   const [answer, setAnswer] = useState("");
 
   // extracting getNumCombinations fuction from formula hook
-  const { getNumCombinations } = useFomula();
+  const { getNumCombinations } = useFormula();
 
   return (
     <div>

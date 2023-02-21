@@ -1,5 +1,5 @@
 import React from "react";
-import useFomula from "../hooks/useFormula";
+import useFormula from "../hooks/useFormula";
 
 function Task13() {
   const row1 = [1, 2];
@@ -8,8 +8,8 @@ function Task13() {
   const row4 = [];
   const row5 = [];
 
-  //useFormala hook
-  const { concatenateArrays } = useFomula();
+  // extracting concatenateArrays fuction from formula hook
+  const { concatenateArrays } = useFormula();
 
   // combining all rows in one array
   const row = [row1, row2, row3, row4, row5];

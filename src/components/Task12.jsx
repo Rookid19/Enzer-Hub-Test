@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import useFormula from "../hooks/useFormula";
 
 function Task12() {
+  // extracting getNumCombinations fuction from formula hook
+  const { getNumCombinations } = useFormula();
+  const [answer, setAnswer] = useState("");
+
   let row1 = [1];
   let row2 = [2, 4, 5];
   let row3 = [1, 3];
@@ -11,36 +16,25 @@ function Task12() {
   const total_user_selection =
     row1.length + row2.length + row3.length + row4.length + row5.length;
 
-    //number to form one bet
+  //number to form one bet
   const number_to_form_one_bet = 1;
-
-
-  const getNumCombinations = (n, k) => {
-    // calculate the binomial coefficient
-    let numerator = 1;
-    for (let i = n; i > n - k; i--) {
-      numerator *= i;
-    }
-    let denominator = 1;
-    for (let i = 1; i <= k; i++) {
-      denominator *= i;
-    }
-    console.log(numerator / denominator);
-    return numerator / denominator;
-  };
 
   return (
     <div>
       <h1>Task 12</h1>
       <button
         onClick={() =>
-          getNumCombinations(total_user_selection, number_to_form_one_bet)
+          console.log(
+            getNumCombinations(
+              total_user_selection,
+              number_to_form_one_bet,
+              setAnswer
+            )
+          )
         }
       >
         console log results
       </button>
-      <br />
-      <br />
       <br />
     </div>
   );
