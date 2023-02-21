@@ -4,13 +4,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { FormulaProvider } from "./hooks/useFormula";
+import { RowsProvider } from "./hooks/useRowsData";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <RowsProvider>
     <FormulaProvider>
       <App />
     </FormulaProvider>
+    </RowsProvider>
   </React.StrictMode>
 );
 
