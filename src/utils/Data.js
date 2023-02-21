@@ -1,3 +1,4 @@
+// exporting user selection data globally
 export const user_selection = [
   [1, 2, 3, 4, 5],
   [2, 3, 4, 5, 6],
@@ -6,8 +7,10 @@ export const user_selection = [
   [5, 6, 7, 8, 9],
 ];
 
+// exporting machine selection data globally
 export const machine_selection = [1, 2, 3, 4, 5];
 
+//exporting buttons label globally
 export const button_labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
@@ -20,6 +23,7 @@ export const task5_buttons = [
   { id: 6, label: "clear" },
 ];
 
+// exporting rows data globally
 export const rows = [
   {
     id: 1,
@@ -34,8 +38,3 @@ export const rows = [
     name: "3rd",
   },
 ];
-
-// row1[3,4,5,6]
-// row2[1,3,4]
-// row3[]
-//  "3,4,5,6|1,3,4|"

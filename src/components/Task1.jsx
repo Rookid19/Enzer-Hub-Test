@@ -2,10 +2,13 @@ import React from "react";
 import { user_selection, machine_selection } from "../utils/Data";
 
 function Task1({setElementMatch}) {
-  
+
+// initializing counter to zero (0)
 let counter = 0;
+
   const compare = () => {
     user_selection.forEach((item) => {
+      // we loop through the user selection and if it matches machine selection we increase the counter by 1
       if (JSON.stringify(item) === JSON.stringify(machine_selection)) {
         counter += 1
         return true;
@@ -14,6 +17,8 @@ let counter = 0;
       }
     });
     setElementMatch(counter)
+
+    // initializing the counter back to zero
     counter = 0;
   };
 

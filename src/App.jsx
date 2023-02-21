@@ -16,14 +16,15 @@ import Task13 from "./components/Task13";
 import Task14 from "./components/Task14";
 
 export default function App() {
+  // task 1 
   const [elementMatch, setElementMatch] = useState(0);
-
   const [firstArray, setFirstArray] = useState([]);
   const [secondArray, setSecondArray] = useState([]);
   const [thirdArray, setThirdArray] = useState([]);
 
   const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+  // whenever there is a change in firstArray, secondArray and third Array the useEffect fucntion fires
   useEffect(() => {
     if (rows[0].name === "1st") {
       console.log("row 1 ---> " + firstArray.sort());
