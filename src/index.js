@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { FomulaProvider } from "./hooks/useFomula";
+import { FormulaProvider } from "./hooks/useFormula";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <FomulaProvider>
+    <FormulaProvider>
       <App />
-    </FomulaProvider>
+    </FormulaProvider>
   </React.StrictMode>
 );
 

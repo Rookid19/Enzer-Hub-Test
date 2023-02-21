@@ -1,5 +1,5 @@
 import React from "react";
-import useFomula from "../hooks/useFomula";
+import useFomula from "../hooks/useFormula";
 
 function Task13() {
   const row1 = [1, 2];

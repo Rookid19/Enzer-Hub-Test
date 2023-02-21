@@ -1,24 +1,13 @@
 import React, { useEffect, useState } from "react";
+import useFomula from "../hooks/useFormula";
 
 function Task11() {
   const [totalUserSelection, setTotalUserSelection] = useState("");
   const [formsOneBet, setFormsOneBet] = useState("");
   const [answer, setAnswer] = useState("");
 
-  const getNumCombinations = (n, k) => {
-    // calculate the binomial coefficient
-    let numerator = 1;
-    for (let i = n; i > n - k; i--) {
-      numerator *= i;
-    }
-    let denominator = 1;
-    for (let i = 1; i <= k; i++) {
-      denominator *= i;
-    }
-    console.log(numerator / denominator);
-    setAnswer(numerator / denominator);
-    return numerator / denominator;
-  };
+  // extracting getNumCombinations fuction from formula hook
+  const { getNumCombinations } = useFomula();
 
   return (
     <div>
@@ -43,13 +32,16 @@ function Task11() {
       </h3>
 
       <button
-        onClick={() => getNumCombinations(totalUserSelection, formsOneBet)}
+        onClick={() =>
+          console.log(
+            getNumCombinations(totalUserSelection, formsOneBet, setAnswer)
+          )
+        }
         disabled={totalUserSelection === "" || formsOneBet === ""}
       >
         Show total bet
       </button>
       <h3>The total bet is {answer}</h3>
-     
     </div>
   );
 }
