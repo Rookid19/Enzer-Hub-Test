@@ -13,9 +13,11 @@ function SelectClear() {
     fourthArray,
     fifthArray,
   } = useRows();
-  const { getNumCombinations, concatenateArrays } = useFormula();
+  const { getNumCombinations } = useFormula();
 
   const [answer, setAnswer] = useState("");
+  const [fiveStandard, setFiveStandard] = useState("");
+
   // total number of user selection
   const total_user_selection =
     firstArray.length +
@@ -30,13 +32,11 @@ function SelectClear() {
   const sorted = () => {
     console.log(
       "The total number of bet " +
-        getNumCombinations(
-          total_user_selection,
-          number_to_form_one_bet,
-          setAnswer
-        )
+        getNumCombinations(total_user_selection, number_to_form_one_bet)
     );
-
+    setFiveStandard(
+      getNumCombinations(total_user_selection, number_to_form_one_bet)
+    );
     console.log([
       firstArray.sort(),
       secondArray.sort(),
@@ -81,6 +81,7 @@ function SelectClear() {
           Unsorted
         </button>
       </div>
+      <h4>ALL five straight standard number of bets is {fiveStandard}</h4>
     </div>
   );
 }

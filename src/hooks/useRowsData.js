@@ -52,10 +52,10 @@ export const RowsProvider = ({ children }) => {
       thirdArray.splice(third_index, 1);
     }
     if (fourth_index !== -1) {
-      fourthArray.splice(third_index, 1);
+      fourthArray.splice(fourth_index, 1);
     }
     if (fifth_index !== -1) {
-      fifthArray.splice(third_index, 1);
+      fifthArray.splice(fifth_index, 1);
     }
     setFirstArray((prev) => [...prev]);
     setSecondArray((prev) => [...prev]);

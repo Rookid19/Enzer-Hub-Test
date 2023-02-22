@@ -17,7 +17,7 @@ export const FormulaProvider = ({ children }) => {
   // and k is number to form a bet
   // this function get the number of combinations
 
-  const getNumCombinations = (n, k, setAnswer) => {
+  const getNumCombinations = (n, k) => {
     // calculate the binomial coefficient
     let numerator = 1;
     for (let i = n; i > n - k; i--) {
@@ -27,7 +27,7 @@ export const FormulaProvider = ({ children }) => {
     for (let i = 1; i <= k; i++) {
       denominator *= i;
     }
-    setAnswer(numerator / denominator);
+
     return numerator / denominator;
   };
 

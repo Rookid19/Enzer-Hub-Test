@@ -33,8 +33,8 @@ function Task11() {
 
       <button
         onClick={() =>
-          console.log(
-            getNumCombinations(totalUserSelection, formsOneBet, setAnswer)
+        setAnswer(
+            getNumCombinations(totalUserSelection, formsOneBet)
           )
         }
         disabled={totalUserSelection === "" || formsOneBet === ""}
@@ -42,6 +42,7 @@ function Task11() {
         Show total bet
       </button>
       <h3>The total bet is {answer}</h3>
+      
     </div>
   );
 }

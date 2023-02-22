@@ -4,7 +4,6 @@ import useFormula from "../hooks/useFormula";
 function Task12() {
   // extracting getNumCombinations fuction from formula hook
   const { getNumCombinations } = useFormula();
-  const [answer, setAnswer] = useState("");
 
   let row1 = [1];
   let row2 = [2, 4, 5];
@@ -28,7 +27,6 @@ function Task12() {
             getNumCombinations(
               total_user_selection,
               number_to_form_one_bet,
-              setAnswer
             )
           )
         }
