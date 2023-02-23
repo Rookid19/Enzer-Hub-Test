@@ -5,7 +5,11 @@ import { user_selection } from "../utils/Data";
 function Task2() {
   const { elementMatch } = useRows();
 
-  // outputing task 1 result to the console
+ 
+  /**
+   *outputing task 1 result in the console
+   *
+   */
   const result = () => {
     console.log("number of user selection " + user_selection.length);
     console.log("number of element match " + elementMatch);

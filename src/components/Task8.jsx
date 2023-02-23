@@ -1,19 +1,36 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
+
 function Task8() {
   const [data, setData] = useState([]);
+
+  /**
+   * This code defines an asynchronous function fetchData() that uses the axios library to make a 
+   * GET request to the URL "https://jsonplaceholder.typicode.com/users"
+   * If the request is successful, the function sets the retrieved data (res.data) to the data state variable
+   *  using the setData() function. If the request fails, it displays an alert message with the error message.
+   */
 
   const fetchData = async () => {
     await axios
       .get("https://jsonplaceholder.typicode.com/users")
-      .then((res) => {
-        setData(res.data);
-        // console.log(res.data);
-      })
+      .then((res) => setData(res.data))
       .catch((error) => alert(error));
   };
 
+  /**
+ *The callback function first calls the fetchData() function, which uses the Axios library to make a GET request to an external API endpoint.
+ *The returned data is then set as the component's state using the setData function.
+ *Next, the callback function sets up an interval using the setInterval function. 
+ *This interval will execute the fetchData function every 60 seconds (or 1 minute). 
+ *The setInterval function returns an ID that is stored in the interval constant.
+ 
+ *Finally, the useEffect hook returns a cleanup function that clears the interval using the clearInterval function.
+ *This ensures that the interval is stopped when the component is unmounted or when the useEffect hook is re-run due to a change in its dependencies.
+ *
+ * @return {*} 
+ */
   useEffect(() => {
     fetchData();
     const interval = setInterval(() => {
@@ -24,7 +41,6 @@ function Task8() {
     };
   }, []);
 
-  // fetchDataInterval();
   return (
     <div>
       <table>

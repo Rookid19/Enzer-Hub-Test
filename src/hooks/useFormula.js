@@ -5,18 +5,33 @@ export const FormulaContext = createContext({});
 
 //The provider is used to create a context that can be consumed
 export const FormulaProvider = ({ children }) => {
-  // concantenating arrays in this form ----> "1,2|4,6|7,3||"
+
+  
+  /**
+   * The concatenateArrays function takes in an array of arrays, where each inner array contains a row of data. 
+   * The function then returns a string that concatenates all of the elements in the inner arrays together,
+   * separated by commas within each row and separated by vertical bars between rows.
+   *
+   * eg.[[1,2],[4,6],[7,3],[],[]] should return an answer in this format 1,2|4,6|7,3||
+   * 
+   * @param {*} row
+   * @return {*} 
+   */
   const concatenateArrays = (row) => {
-    // map function to transform each inner array into a string of its elements joined by commas,
-    //  and then use the join function to concatenate the resulting strings with the delimiter |.
     const result = row.map((innerArr) => innerArr.join(",")).join("|");
     return result;
   };
 
-  // where n is the total number of user selection
-  // and k is number to form a bet
-  // this function get the number of combinations
-
+  /**
+   *
+   * This is a function named getNumCombinations that calculates the number of combinations 
+   * of k items that can be chosen from a set of n items.
+   * where n is the total number of user selection
+   * and k is number to form a bet this function get the number of combinations
+   * @param {*} n
+   * @param {*} k
+   * @return {*} 
+   */
   const getNumCombinations = (n, k) => {
     // calculate the binomial coefficient
     let numerator = 1;
@@ -31,8 +46,14 @@ export const FormulaProvider = ({ children }) => {
     return numerator / denominator;
   };
 
-  //This function get combination of numbers in pairs
-  // output: [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
+
+  /**
+   * Returns the result array, which contains all possible combinations of 
+   *
+   * @param {*} arr
+   * @param {*} k
+   * @return {*} 
+   */
   function getCombinations(arr, k) {
     if (k === 1) {
       return arr.map((e) => [e]);
@@ -47,7 +68,11 @@ export const FormulaProvider = ({ children }) => {
     return result;
   }
 
-  // will only recompute the memoized value when one of the dependencies has changed.
+  /*This code is using the useMemo hook to memoize an object with three functions: concatenateArrays, getNumCombinations, and getCombinations.
+  *The useMemo hook is used to avoid unnecessary calculations by caching the result of a function or computation.
+  *It takes two arguments: a function that returns a value, and an array of dependencies. If any of the dependencies change,
+  * the function is re-evaluated, and the result is cached until the dependencies change agai
+  /** @type {*} */
   const memo_value = useMemo(
     () => ({
       concatenateArrays,

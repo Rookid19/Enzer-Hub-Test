@@ -14,8 +14,6 @@ function SelectClear() {
     fifthArray,
   } = useRows();
   const { getNumCombinations } = useFormula();
-
-  const [answer, setAnswer] = useState("");
   const [fiveStandard, setFiveStandard] = useState("");
 
   // total number of user selection
