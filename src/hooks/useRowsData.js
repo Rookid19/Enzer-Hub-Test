@@ -44,6 +44,15 @@ export const RowsProvider = ({ children }) => {
     });
   };
 
+  /**
+    * This code defines a function onClear that takes a label parameter. The function first finds the index of the label in five different
+    * arrays firstArray, secondArray, thirdArray, fourthArray, and fifthArray. If the label is found in an array, 
+    * it is removed from that array using the splice() method. Then, the state is updated for all five arrays using the 
+    * setFirstArray(), setSecondArray(), setThirdArray(), setFourthArray(), and setFifthArray() functions with the current values of each 
+    * array passed in as the new state. This causes the component to re-render with the updated state, removing the label from the corresponding array
+   *
+   * @param {*} label
+   */
   const onClear = (label) => {
     const first_index = firstArray.indexOf(label);
     const second_index = secondArray.indexOf(label);
