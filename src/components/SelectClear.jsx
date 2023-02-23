@@ -53,7 +53,7 @@ function SelectClear() {
         {button_labels.map((label, index) => (
           <button
             key={label}
-            className="button"
+            className="button2"
             onClick={() => onSelectAll(label, index)}
           >
             All
@@ -64,7 +64,7 @@ function SelectClear() {
         {button_labels.map((label, index) => (
           <button
             key={label}
-            className="button"
+            className="button2"
             onClick={() => onClear(label, index)}
           >
             Clear

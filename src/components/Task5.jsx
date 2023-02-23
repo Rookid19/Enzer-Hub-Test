@@ -58,7 +58,7 @@ function Task5({ row }) {
     <div>
       <div className="button_container">
         {task5_buttons.map(({ id, label }) => (
-          <button className="button" key={id} onClick={() => select(label)}>
+          <button className="button2" key={id} onClick={() => select(label)}>
             {label}
           </button>
         ))}
