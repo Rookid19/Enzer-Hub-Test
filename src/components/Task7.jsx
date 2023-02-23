@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+
 function Task7() {
   const [number, setNumber] = useState(null);
   const [divisibleState, setDivisibleState] = useState({
@@ -9,6 +10,16 @@ function Task7() {
     user_input: "",
     type: "",
   });
+
+  /**
+   *This code defines a function called divisor that takes an input parameter 
+   *and updates the divisibleState state variable accordingly.
+   *
+   * eg. The function first checks whether the input is divisible by both 3 and 5 using the % operator. 
+   * If so, it sets the threeAndFive property of the divisibleState object to "FizzBuzz". 
+   * Otherwise, it sets it to null
+   * @param {*} input
+   */
 
   const divisor = (input) => {
     if (input % 3 === 0 && input % 5 === 0) {
@@ -53,6 +64,14 @@ function Task7() {
     setDivisibleState({ ...divisibleState });
   };
 
+
+  /**
+ * This code snippet is a useEffect hook that runs when the number state changes.
+ * The useEffect hook takes a function as its first parameter and an array of dependencies as its second parameter. In this case, 
+ * the function checks if the number state is not null and then calls the divisor function with the parsed integer value of number
+ *
+ * @return {*} 
+ */
   useEffect(() => {
     if (number !== null) {
       divisor(parseInt(number));

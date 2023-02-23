@@ -30,6 +30,14 @@ function Task5({ row }) {
 
   const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+  /**
+   *This code defines a function called select that takes a label parameter as input.
+   *The select function uses conditional statements (if/else if) to determine what action
+   *to take based on the value of the label parameter.
+   *eg.
+   *If the label parameter is equal to "even", the select function calls the setArray function with the value of the even array as its argument.
+   * @param {*} label
+   */
   const select = (label) => {
     if (label === "even") {
       setArray(even);
@@ -45,7 +53,7 @@ function Task5({ row }) {
       setArray(labels);
     }
   };
-  
+
   return (
     <div>
       <div className="button_container">
