@@ -6,7 +6,7 @@ function Task9() {
 
   const drawsInterval = () => {
       const newDraw = [getRandomNumber(), getRandomNumber(), getRandomNumber()];
-      console.log(newDraw);
+      // console.log(newDraw);
       setDraws((draws) => [...draws, newDraw]);
   };
 

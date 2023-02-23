@@ -48,7 +48,7 @@ function Task7() {
       divisibleState.type = isNaN(input) ? input : null;
       //   return NaN;
     } 
-    console.log("--> type of " + typeof input);
+    // console.log("--> type of " + typeof input);
 
     setDivisibleState({ ...divisibleState });
   };

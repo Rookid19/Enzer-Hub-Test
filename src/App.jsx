@@ -17,6 +17,7 @@ import Task14 from "./components/Task14";
 import useRows from "./hooks/useRowsData";
 import SelectClear from "./components/SelectClear";
 import Task15 from "./components/Task15";
+import Task16 from "./components/Task16";
 
 export default function App() {
   return (
@@ -41,6 +42,7 @@ export default function App() {
       <Task13 />
       <Task14 />
       <Task15 />
+      <Task16 />
       <br />
       <br />
       <br />
