@@ -3,6 +3,7 @@ import { button_labels } from "../utils/Data";
 import "../App.css";
 import useRows from "../hooks/useRowsData";
 function Task4({ row }) {
+  //calling arrays from useRows hooks
   const {
     firstArray,
     secondArray,
@@ -15,6 +16,7 @@ function Task4({ row }) {
     setFourthArray,
     setFifthArray,
   } = useRows();
+
 
   const array =
     row.id === 1
@@ -38,6 +40,15 @@ function Task4({ row }) {
       ? setFourthArray
       : setFifthArray;
 
+  /**
+   *This code defines a function onSelect that takes in a parameter label. 
+   *The function modifies an array (array) based on whether the label is
+   *already present in the array or not.
+   *The first line of the function checks if the array already contains the label by calling the includes method on the array.
+   *If the label is already present in the array, the function finds the index of the label in the array using the indexOf method and
+   *removes the label from the array using the splice method.
+   * @param {*} label
+   */
   const onSelect = (label) => {
     if (array.includes(label)) {
       const index = array.indexOf(label);
