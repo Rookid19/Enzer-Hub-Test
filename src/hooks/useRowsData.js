@@ -13,6 +13,15 @@ export const RowsProvider = ({ children }) => {
   const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   
+  /**
+   * Within the onSelectAll function, a loop is used to iterate through each value in the labels array. 
+   * If the index of the label matches the value in the loop, several conditions are checked using if statements.
+   * For each array (e.g. firstArray, secondArray, etc.), the function checks if the label is already present using the indexOf method. 
+   * If it is not already present, the corresponding array is updated using the set...Array function and spread operator (...prev) to add the label.
+   *If the label is already present in the array, it is removed by setting its value to null.
+   * @param {*} label
+   * @param {*} index
+   */
   const onSelectAll = (label, index) => {
     labels.forEach((value) => {
       if (index === value) {
