@@ -90,10 +90,12 @@ function Timer() {
     return `${hours}:${minutes}:${seconds}`;
   };
 
+//   const abc =123
+//   console.log(abc.toString().split("").map(Number))
   return (
     <div className="timer">
       <h3 className="time_remaining">{formatTime(timeRemaining)}</h3>
-      <h3 className="random_number">{randomNumber}</h3>
+      <h3 className="random_number">{JSON.stringify(randomNumber.toString().split("").map(Number))}</h3>
     </div>
   );
 }

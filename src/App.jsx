@@ -18,11 +18,13 @@ import SelectClear from "./components/SelectClear";
 import Task15 from "./components/Task15";
 import Task16 from "./components/Task16";
 import Timer from "./components/Timer";
+import Api from "./components/Api";
 
 export default function App() {
   return (
     <div>
       <Timer />
+      <Api />
       <Task1 />
       <Task2 />
       <h1>TASK 4 and 5</h1>
