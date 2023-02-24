@@ -7,9 +7,8 @@
   height: 50px;
   border-radius: 50%;
   margin-inline: 20px;
-
 }
-.button_container{
+.button_container {
   width: 930px;
 }
 
@@ -17,7 +16,6 @@
   width: 70px;
   height: 40px;
   margin: 10px;
-
 }
 .button2:hover {
   background-color: #72f542;
@@ -39,7 +37,6 @@ tr:nth-child(even) {
 .submit-section {
   text-align: center;
   margin-top: 30px;
-
 }
 #submit1 {
   background-color: aqua;
@@ -51,8 +48,21 @@ tr:nth-child(even) {
 
 #submit2 {
   background-color: blue;
-  color:white;
+  color: white;
   border: none;
   height: 40px;
   width: 90px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+}
+
+.time_remaining {
+  margin-right: 30px;
+  font-size: 30px;
+}
+.random_number {
+  font-size: 30px;
 }
