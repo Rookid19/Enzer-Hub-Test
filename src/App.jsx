@@ -19,12 +19,14 @@ import Task15 from "./components/Task15";
 import Task16 from "./components/Task16";
 import Timer from "./components/Timer";
 import Api from "./components/Api";
+import FiveGroupSixty from "./components/FiveGroupSixty";
 
 export default function App() {
   return (
     <div>
       <Timer />
       <Api />
+      <FiveGroupSixty />
       <Task1 />
       <Task2 />
       <h1>TASK 4 and 5</h1>
