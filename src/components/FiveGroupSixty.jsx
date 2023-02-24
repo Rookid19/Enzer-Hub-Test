@@ -10,11 +10,15 @@ function FiveGroupSixty() {
   const row2Combination = getCombinations1(row2, 3);
 
   const a = () => {
-  row1Combination.forEach(number => {
-    row2Combination.forEach((value) =>{
-        
-    })
-  })
+    let counter = 0;
+    row1Combination.forEach((number) => {
+      row2Combination.forEach((value) => {
+        if (!value.includes(number[0])) {
+          counter++;
+        }
+      });
+    });
+    console.log(counter);
   };
 
 
