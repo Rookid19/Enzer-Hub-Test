@@ -4,10 +4,15 @@ import useFormula from "../hooks/useFormula";
 function FiveGroupSixty() {
   const { getCombinations1 } = useFormula();
 
-  const row1 = [2, 3, 4, 5, 6, 7, 8, 9];
-  const row2 = [8, 7, 9, 2, 3, 4, 5];
-  const row1Combination = getCombinations1(row1, 1);
-  const row2Combination = getCombinations1(row2, 3);
+  // const row1 = [2, 3, 4, 5, 6, 7, 8, 9];
+  // const row2 = [8, 7, 9, 2, 3, 4, 5];
+  const row1 = [0,1,2,3]
+  const row2 = [1,2,4,5]
+  // const row1Combination = getCombinations1(row1, 1);
+  // const row2Combination = getCombinations1(row2, 3);
+
+  const row2Combination = getCombinations1(row1, 2);
+  const row1Combination = getCombinations1(row2, 1);
 
   const a = () => {
     let counter = 0;

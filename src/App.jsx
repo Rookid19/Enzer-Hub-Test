@@ -20,34 +20,51 @@ import Task16 from "./components/Task16";
 import Timer from "./components/Timer";
 import Api from "./components/Api";
 import FiveGroupSixty from "./components/FiveGroupSixty";
+import Games from "./components/Games";
 
 export default function App() {
+  const [page, setPage] = useState(1);
   return (
     <div>
-      <Timer />
-      <Api />
-      <FiveGroupSixty />
-      <Task1 />
-      <Task2 />
-      <h1>TASK 4 and 5</h1>
-      {rows.map((row) => (
-        <div className="first_row" key={row.id}>
-          <Task4 row={row} />
-          <Task5 row={row} />
-        </div>
-      ))}
-      <SelectClear />
-      <Task6 />
-      <Task7 />
-      <Task8 />
-      <Task9 />
-      <Task10 />
-      <Task11 />
-      <Task12 />
-      <Task13 />
-      <Task14 />
-      <Task15 />
-      <Task16 />
+      <div className="page_section">
+        <button className="page_button" onClick={() => setPage(1)}>
+          Tasks
+        </button>
+        <button className="games" onClick={() => setPage(2)}>
+          Games
+        </button>
+      </div>
+      {page === 1 ? (
+        <>
+          <Timer />
+          <Api />
+          <FiveGroupSixty />
+          <Task1 />
+          <Task2 />
+          <h1>TASK 4 and 5</h1>
+          {rows.map((row) => (
+            <div className="first_row" key={row.id}>
+              <Task4 row={row} />
+              <Task5 row={row} />
+            </div>
+          ))}
+          <SelectClear />
+          <Task6 />
+          <Task7 />
+          <Task8 />
+          <Task9 />
+          <Task10 />
+          <Task11 />
+          <Task12 />
+          <Task13 />
+          <Task14 />
+          <Task15 />
+          <Task16 />
+        </>
+      ) : (
+        <Games />
+      )}
+
       <br />
       <br />
       <br />

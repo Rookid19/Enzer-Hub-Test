@@ -6,16 +6,20 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-inline: 20px;
+  margin-inline: 15px;
 }
 .button_container {
-  width: 930px;
+  /* width: 930px; */
 }
 
 .button2 {
-  width: 70px;
+  width: 67px;
   height: 40px;
-  margin: 10px;
+  margin: 7px;
+}
+.button:hover {
+  background-color: #72f542;
+  border: none;
 }
 .button2:hover {
   background-color: #72f542;
@@ -65,4 +69,54 @@ tr:nth-child(even) {
 }
 .random_number {
   font-size: 30px;
+}
+
+.page_section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_button{
+  margin:10px;
+  cursor: pointer;
+}
+.row{
+  display: flex
+}
+
+.row_name_section{
+  width: 100px;
+  margin-top: 10px;
+}
+
+.title_section{
+  text-align: center;
+}
+
+.results_section{
+  margin-left: 130px;
+  margin-top: 15px;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.price_section{
+  display: flex;
+  flex-direction: row;
+  margin-left: 130px;
+}
+#price{
+  background-color: blue;
+  margin-right: 10px;
+  padding-inline: 10px;
+  cursor: pointer;
+  color:white
+}
+.button_container2{
+  margin-left: 110px;
+}
+
+.all_select2{
+  margin-left: 90px;
 }

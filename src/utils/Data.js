@@ -45,3 +45,5 @@ export const rows = [
     name: "5th",
   },
 ];
+
+export const prices = [1, 2, 0.2, 0.1, 0.02, 0.01, 0.002, 0.001];
