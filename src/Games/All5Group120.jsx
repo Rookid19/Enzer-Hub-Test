@@ -38,6 +38,7 @@ function All5Group120({ gameDescription }) {
     setBets(getNumCombinations(array.length, 5));
   };
 
+
   /**
    *This code defines a function called select that takes a label parameter as input.
    *The select function uses conditional statements (if/else if) to determine what action

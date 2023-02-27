@@ -118,6 +118,34 @@ function All5StraightCombo({ gameDescription }) {
     },
     [big, even, odd, small, labels]
   );
+  const onClear = (label) => {
+    const first_index = firstArray.indexOf(label);
+    const second_index = secondArray.indexOf(label);
+    const third_index = thirdArray.indexOf(label);
+    const fourth_index = fourthArray.indexOf(label);
+    const fifth_index = fifthArray.indexOf(label);
+
+    if (first_index !== -1) {
+      firstArray.splice(first_index, 1);
+    }
+    if (second_index !== -1) {
+      secondArray.splice(second_index, 1);
+    }
+    if (third_index !== -1) {
+      thirdArray.splice(third_index, 1);
+    }
+    if (fourth_index !== -1) {
+      fourthArray.splice(fourth_index, 1);
+    }
+    if (fifth_index !== -1) {
+      fifthArray.splice(fifth_index, 1);
+    }
+    setFirstArray((prev) => [...prev]);
+    setSecondArray((prev) => [...prev]);
+    setThirdArray((prev) => [...prev]);
+    setFourthArray((prev) => [...prev]);
+    setFifthArray((prev) => [...prev]);
+  };
 
   const results =
     firstArray.length *
@@ -181,6 +209,17 @@ function All5StraightCombo({ gameDescription }) {
             onClick={() => onSelectAll(label, index)}
           >
             All
+          </button>
+        ))}
+      </div>
+      <div className="all_clear">
+        {button_labels.map((label, index) => (
+          <button
+            key={label}
+            className="button2"
+            onClick={() => onClear(label, index)}
+          >
+            Clear
           </button>
         ))}
       </div>

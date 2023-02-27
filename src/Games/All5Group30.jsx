@@ -9,7 +9,7 @@ function All5Group30({ gameDescription }) {
   const [fourthArray, setFourthArray] = useState([]);
   const [fifthArray, setFifthArray] = useState([]);
   const [bets, setBets] = useState(null);
-  const [totalPrice, setTotalPrice] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(null);
 
   const { getCombinations1 } = useFormula();
 

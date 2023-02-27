@@ -44,11 +44,11 @@ export default function App() {
           <h1>TASK 4 and 5</h1>
           {rows.map((row) => (
             <div className="first_row" key={row.id}>
-              <Task4 row={row} />
+              {/* <Task4 row={row} /> */}
               <Task5 row={row} />
             </div>
           ))}
-          <SelectClear />
+          {/* <SelectClear /> */}
           <Task6 />
           <Task7 />
           <Task8 />

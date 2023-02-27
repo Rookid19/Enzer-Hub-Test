@@ -65,7 +65,6 @@ function All5Group60({ gameDescription }) {
     }
   };
 
-  
   const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   const even = button_labels.filter((item) => item % 2 === 0);
   const odd = button_labels.filter((item) => item % 2 !== 0);
@@ -109,8 +108,36 @@ function All5Group60({ gameDescription }) {
         }
       });
     });
-    console.log(counter);
     setBets(counter);
+  };
+
+  const onClear = (label) => {
+    const first_index = firstArray.indexOf(label);
+    const second_index = secondArray.indexOf(label);
+    const third_index = thirdArray.indexOf(label);
+    const fourth_index = fourthArray.indexOf(label);
+    const fifth_index = fifthArray.indexOf(label);
+
+    if (first_index !== -1) {
+      firstArray.splice(first_index, 1);
+    }
+    if (second_index !== -1) {
+      secondArray.splice(second_index, 1);
+    }
+    if (third_index !== -1) {
+      thirdArray.splice(third_index, 1);
+    }
+    if (fourth_index !== -1) {
+      fourthArray.splice(fourth_index, 1);
+    }
+    if (fifth_index !== -1) {
+      fifthArray.splice(fifth_index, 1);
+    }
+    setFirstArray((prev) => [...prev]);
+    setSecondArray((prev) => [...prev]);
+    setThirdArray((prev) => [...prev]);
+    setFourthArray((prev) => [...prev]);
+    setFifthArray((prev) => [...prev]);
   };
 
   /**
@@ -198,9 +225,27 @@ function All5Group60({ gameDescription }) {
           </button>
         ))}
       </div>
+
+      <div className="all_clear">
+        {button_labels.map((label, index) => (
+          <button
+            key={label}
+            className="button2"
+            onClick={() => onClear(label, index)}
+          >
+            Clear
+          </button>
+        ))}
+      </div>
+
       <div className="price_section">
         {prices.map((price, index) => (
-          <button key={index} id="price" onClick={() => setTotalPrice(price)} style={{backgroundColor: totalPrice === price ? "red" : null }}>
+          <button
+            key={index}
+            id="price"
+            onClick={() => setTotalPrice(price)}
+            style={{ backgroundColor: totalPrice === price ? "red" : null }}
+          >
             {price}
           </button>
         ))}
