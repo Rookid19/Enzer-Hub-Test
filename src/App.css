@@ -105,13 +105,15 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: row;
   margin-left: 130px;
+  margin-top:20px
 }
 #price{
-  background-color: blue;
+  /* background-color: blue; */
   margin-right: 10px;
   padding-inline: 10px;
   cursor: pointer;
-  color:white
+  border: none;
+  /* color:white */
 }
 .button_container2{
   margin-left: 110px;

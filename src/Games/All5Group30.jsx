@@ -9,7 +9,7 @@ function All5Group30({ gameDescription }) {
   const [fourthArray, setFourthArray] = useState([]);
   const [fifthArray, setFifthArray] = useState([]);
   const [bets, setBets] = useState(null);
-  const [price, setPrice] = useState(null);
+  const [totalPrice, setTotalPrice] = useState(1);
 
   const { getCombinations1 } = useFormula();
 
@@ -201,7 +201,7 @@ function All5Group30({ gameDescription }) {
       </div>
       <div className="price_section">
         {prices.map((price, index) => (
-          <button key={index} id="price" onClick={() => setPrice(price)}>
+          <button key={index} id="price" onClick={() => setTotalPrice(price)} style={{backgroundColor: totalPrice === price ? "red" : null }}>
             {price}
           </button>
         ))}
@@ -209,7 +209,7 @@ function All5Group30({ gameDescription }) {
 
       <div className="results_section">
         <span>
-          {bets} bets. Total {price * bets}
+          {bets} bets. Total {totalPrice * bets}
         </span>
       </div>
       {/* <button onClick={showResults}>test</button> */}
